@@ -22,7 +22,7 @@ spec:
       - name: filter
         # UPDATEME
         value: (header.match('X-GitHub-Event', 'push') && body.repository.full_name
-          == 'jamesfalkner/microsweeper-gitops')
+          == 'danieloh30/microsweeper-gitops')
       - name: overlays
         value:
         - expression: body.ref.split('/')[2]
@@ -47,7 +47,7 @@ spec:
       - name: filter
         # UPDATEME
         value: (header.match('X-GitHub-Event', 'push') && body.repository.full_name
-          == 'jamesfalkner/microsweeper-quarkus')
+          == 'danieloh30/microsweeper-quarkus')
       - name: overlays
         value:
         - expression: body.ref.split('/')[2]

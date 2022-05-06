@@ -14,7 +14,7 @@ environments:
           - dev-app-microsweeper-quarkus-microsweeper-quarkus-binding
           - github-push-binding
       # UPDATEME
-      source_url: https://github.com/jamesfalkner/microsweeper-quarkus.git
+      source_url: https://github.com/danieloh30/microsweeper-quarkus.git
       webhook:
         secret:
           name: webhook-secret-dev-microsweeper-quarkus
@@ -27,5 +27,5 @@ environments:
       template: app-ci-template
 - name: stage
 # UPDATEME
-gitops_url: https://github.com/jamesfalkner/microsweeper-gitops.git
+gitops_url: https://github.com/danieloh30/microsweeper-gitops.git
 version: 1

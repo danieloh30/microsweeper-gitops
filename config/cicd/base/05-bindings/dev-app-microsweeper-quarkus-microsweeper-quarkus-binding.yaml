@@ -7,7 +7,7 @@ spec:
   params:
   - name: imageRepo
     # UPDATEME
-    value: quay.io/jfalkner1/microsweeper-quarkus
+    value: quay.io/danieloh30/microsweeper-quarkus
   - name: tlsVerify
     value: "true"
 status: {}

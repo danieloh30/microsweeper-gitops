@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   annotations:
     # UPDATEME
-    app.openshift.io/vcs-uri: https://github.com/jamesfalkner/microsweeper-gitops.git?ref=HEAD
+    app.openshift.io/vcs-uri: https://github.com/danieloh30/microsweeper-gitops.git?ref=HEAD
   labels:
     argocd.argoproj.io/managed-by: openshift-gitops
   name: prod

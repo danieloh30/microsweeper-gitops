@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     # UPDATEME
-    app.openshift.io/vcs-uri: https://github.com/jamesfalkner/microsweeper-quarkus
+    app.openshift.io/vcs-uri: https://github.com/danieloh30/microsweeper-quarkus
   labels:
     app.kubernetes.io/name: microsweeper-quarkus
     app.kubernetes.io/part-of: app-microsweeper-quarkus

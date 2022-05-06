@@ -11,7 +11,7 @@ spec:
   source:
     path: environments/dev/env/overlays
     # UPDATEME
-    repoURL: https://github.com/jamesfalkner/microsweeper-gitops.git
+    repoURL: https://github.com/danieloh30/microsweeper-gitops.git
   syncPolicy:
     automated:
       prune: true

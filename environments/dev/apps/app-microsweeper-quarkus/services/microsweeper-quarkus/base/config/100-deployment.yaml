@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     # UPDATEME
-    app.openshift.io/vcs-uri: https://github.com/jamesfalkner/microsweeper-quarkus
+    app.openshift.io/vcs-uri: https://github.com/danieloh30/microsweeper-quarkus
   labels:
     app.kubernetes.io/name: microsweeper-quarkus
     app.kubernetes.io/part-of: app-microsweeper-quarkus
@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       # UPDATEME
-      - image: quay.io/jfalkner1/microsweeper-quarkus:main-c5d938b45f9d5251744e82b8008027d8be471eaf
+      - image: quay.io/danieloh30/microsweeper-quarkus:main-c5d938b45f9d5251744e82b8008027d8be471eaf
         imagePullPolicy: Always
         name: microsweeper-quarkus
         env:
