@@ -1,0 +1,5 @@
+bases:
+- overlays
+commonLabels:
+  # UPDATEME
+  app.openshift.io/vcs-source: danieloh30/microsweeper-gitops

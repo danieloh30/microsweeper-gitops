@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    # UPDATEME
+    app.openshift.io/vcs-uri: https://github.com/danieloh30/microsweeper-quarkus
+  labels:
+    app.kubernetes.io/name: microsweeper-quarkus
+    app.kubernetes.io/part-of: app-microsweeper-quarkus
+    app.openshift.io/runtime: quarkus
+  name: microsweeper-quarkus
+  namespace: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: microsweeper-quarkus
+      app.kubernetes.io/part-of: app-microsweeper-quarkus
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        app.openshift.io/connects-to: postgresql
+      labels:
+        app.kubernetes.io/name: microsweeper-quarkus
+        app.kubernetes.io/part-of: app-microsweeper-quarkus
+        app.openshift.io/runtime: quarkus
+    spec:
+      containers:
+        # UPDATEME
+      - image: quay.io/danieloh30/microsweeper-quarkus:main-23bf80830031a8a2109fd5af96ea4920995b7be1
+        imagePullPolicy: Always
+        name: microsweeper-quarkus
+        env:
+          - name: QUARKUS_DATASOURCE_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: postgresql
+                key: database-user
+          - name: QUARKUS_DATASOURCE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: postgresql
+                key: database-password
+          - name: QUARKUS_DATASOURCE_JDBC_URL
+            value: "jdbc:postgresql://postgresql/scores"
+        ports:
+        - containerPort: 8080
+        resources: {}
+      serviceAccountName: default
+status: {}
