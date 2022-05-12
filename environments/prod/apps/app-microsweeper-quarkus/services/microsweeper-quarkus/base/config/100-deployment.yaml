@@ -33,15 +33,9 @@ spec:
         name: microsweeper-quarkus
         env:
           - name: QUARKUS_DATASOURCE_USERNAME
-            valueFrom:
-              secretKeyRef:
-                name: postgresql
-                key: database-user
+            value: sa
           - name: QUARKUS_DATASOURCE_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: postgresql
-                key: database-password
+            vvalue: sa
           - name: QUARKUS_DATASOURCE_JDBC_URL
             value: "jdbc:postgresql://postgresql/scores"
         ports:
