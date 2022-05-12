@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       # UPDATEME
-      - image: quay.io/danieloh30/microsweeper-quarkus:main-712ea9e2f328eb760e917812465647468dc56bac
+      - image: quay.io/danieloh30/microsweeper-quarkus:main-c5d938b45f9d5251744e82b8008027d8be471eaf
         imagePullPolicy: Always
         name: microsweeper-quarkus
         env:
