@@ -54,20 +54,11 @@ spec:
             failureThreshold: 3
           env:
             - name: POSTGRESQL_USER
-              valueFrom:
-                secretKeyRef:
-                  name: postgresql
-                  key: database-user
+              value: sa
             - name: POSTGRESQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgresql
-                  key: database-password
+              value: sa
             - name: POSTGRESQL_DATABASE
-              valueFrom:
-                secretKeyRef:
-                  name: postgresql
-                  key: database-name
+              value: scores
           securityContext:
             capabilities: {}
             privileged: false
